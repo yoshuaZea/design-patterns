@@ -1,2 +1,3 @@
 // import './intro';
-import './singleton/index';
+// import './singleton/index';
+import './strategy/index';
