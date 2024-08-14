@@ -41,7 +41,7 @@ class DiscountSaleStrategy {
 class ForeignSaleStrategy {
   calculate(amount) {
     return amount * this.getDollarPrice();
-  }
+  }mm 
 
   getDollarPrice() {
     return 20;
