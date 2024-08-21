@@ -1,8 +1,8 @@
 /**
  * * Add functionality to an object or class
- * * Envolving functionality with another one (multiple decorator)
+ * * Wrapping functionality with another one (multiple decorator)
  * * Resolve the problem with heritance in classes
- * * Decorator are endless, you can envolve whichever between them
+ * * Decorator are endless, you can wrap whichever between them
  * * Open & Closed Principle Solid
  */
 
@@ -23,7 +23,7 @@ class ProductComponent implements Component {
   }
 }
 
-// * To envolve a component
+// * To wrap a component
 abstract class ProductDecorator implements Component {
   protected component: Component;
 
@@ -91,9 +91,9 @@ console.log(comercialInfoProduct.getDetail());
 const storeProduct = new StoreProductDecorator(productComponent, 18.50);
 console.log(storeProduct.getDetail());
 
-// * Envolve Decorator 2 with Decorator 1
-const envolveDecorator = new StoreProductDecorator(comercialInfoProduct, 12.50);
-console.log(envolveDecorator.getDetail());
+// * Wrap Decorator 2 with Decorator 1
+const wrappedDecorator = new StoreProductDecorator(comercialInfoProduct, 12.50);
+console.log(wrappedDecorator.getDetail());
 
-// * Envolve Decorator 3 with Decorator 2 with decorator 1
-console.log(new HTMLProductDecorator(envolveDecorator).getDetail());
+// * Wrap Decorator 3 with Decorator 2 with decorator 1
+console.log(new HTMLProductDecorator(wrappedDecorator).getDetail());
