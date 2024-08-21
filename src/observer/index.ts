@@ -59,8 +59,8 @@ const obserer2 = new Observer<number>((n) => {
 });
 
 subject.suscribe(obserer1);
-subject.suscribe(obserer2);
 subject.notify(10);
+subject.suscribe(obserer2);
 subject.notify(24);
 
 const subjectString = new Subject<string>();
