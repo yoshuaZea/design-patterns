@@ -51,27 +51,27 @@ class Observer<T> implements IObserver<T> {
 
 // * Process
 const subject = new Subject<number>();
-const obserer1 = new Observer<number>((n) => {
+const observer1 = new Observer<number>((n) => {
   console.log('Observer #1 is running', n);
 });
-const obserer2 = new Observer<number>((n) => {
+const observer2 = new Observer<number>((n) => {
   console.log('Observer #2 is running', n);
 });
 
-subject.suscribe(obserer1);
+subject.suscribe(observer1);
 subject.notify(10);
-subject.suscribe(obserer2);
+subject.suscribe(observer2);
 subject.notify(24);
 
 const subjectString = new Subject<string>();
-const obsererString1 = new Observer<string>((n) => {
+const observerString1 = new Observer<string>((n) => {
   console.log('Observer #1 is running', n.toLocaleUpperCase());
 });
-const obsererString2 = new Observer<string>((n) => {
+const observerString2 = new Observer<string>((n) => {
   console.log('Observer #2 is running', n.toLocaleLowerCase());
 });
 
-subjectString.suscribe(obsererString1);
-subjectString.suscribe(obsererString2);
+subjectString.suscribe(observerString1);
+subjectString.suscribe(observerString2);
 subjectString.notify('job');
 subjectString.notify('ZEA');
