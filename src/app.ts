@@ -4,4 +4,5 @@
 // import './observer/index';
 // import './decorator/index';
 // import './builder/index';
-import './state/index';
+// import './state/index';
+import './bridge/index';
